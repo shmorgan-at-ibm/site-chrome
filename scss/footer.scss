@@ -1,0 +1,7 @@
+// Partials useful for both nav/footer
+@import 'shared/variables';
+@import 'shared/mixins';
+@import 'shared/typography';
+
+// Partials specific to the footer
+@import 'footer/footer';
