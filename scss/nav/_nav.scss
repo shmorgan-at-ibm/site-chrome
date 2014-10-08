@@ -1,3 +1,227 @@
-.nav {
-  background: #000;
+.nav-bar {
+  height: 3.75rem;
+  background-color: #008ABF;
+  overflow: hidden;
+}
+
+.nav-bar .nav-logo-container {
+  background-color: rgba(34,31,31,0.2);
+  display: inline-block;
+  float: left;
+  padding: 1.1875rem 0.8125rem;
+  cursor: pointer;
+}
+
+.nav-bar .nav-logo-container .nav-logo {
+  display: block;
+  width: 3.4375rem;
+  height: 1.375rem;
+}
+
+.nav-bar .nav-logo-2 {
+  width: 6.375rem;
+  height: 1rem;
+  position: relative;
+  top: 0.125rem;
+}
+
+.carrot-down {
+  width: 0.625rem;
+  height: 0.375rem;
+  position: relative;
+  margin-left: 1.25rem;
+  top: -2px;
+}
+
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.nav-bar ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1.1875rem 0;
+}
+
+.nav-bar ul li:hover a {
+  color: white;
+  transition: 0.2s ease;
+}
+
+.nav-bar ul li:hover a svg polygon {
+  fill: white;
+  transition: 0.2s ease;
+}
+
+.nav-bar ul li:hover ul li a {
+  border-bottom: none;
+}
+
+.nav-bar ul li.list-logo {
+  margin-left: 2.5rem;
+  cursor: pointer;
+}
+
+.nav-bar ul li a {
+  margin-left: 2.5rem;
+  padding-bottom: 1rem;
+  letter-spacing: .4px;
+  color: #82D1F5;
+}
+
+.nav-bar ul li a.active {
+  color: white;
+  border-bottom: 5px solid #82D1F5;
+}
+
+.nav-bar ul li ul {
+  display: none;
+}
+
+.nav-bar ul li:hover ul {
+  display: list-item !important;
+  z-index: 99999;
+  position: absolute;
+  margin-top: 1.1875rem;
+  margin-left: 2.4375rem;
+  background-color: #393a3f;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.nav-bar ul li:hover ul .carrot-up {
+  position: absolute;
+  top: -0.5rem;
+  left: 2.5rem;
+  z-index: 100000;
+  width: 0.9375rem;
+  height: 0.5rem;
+}
+
+.nav-bar ul li:hover ul li {
+  display: list-item !important;
+  padding: 0.625rem 1.25rem;
+}
+
+.nav-bar ul li:hover ul li a {
+  font-weight: normal;
+  margin-left: 0;
+  color: #A4A6AB;
+}
+
+.nav-bar ul li:hover ul li:hover {
+  background-color: #231F20;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.nav-bar ul li:hover ul li:hover a {
+  color: white;
+  border-bottom: none;
+}
+
+.search-nav-container {
+  padding-top: 1.25rem;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #D0CFCE;
+  margin-bottom: 1.875rem;
+  overflow: hidden;
+}
+
+.breadcrumb-wrapper {
+  padding-top: 0.4375rem;
+  color: #A4A6AB;
+  font-weight: bold;
+}
+
+.breadcrumb-wrapper a {
+  font-size: 0.8125rem;
+  letter-spacing: .3px;
+  color: #A4A6AB;
+}
+
+.breadcrumb-wrapper a.active-crumb {
+  color: #393a3f;
+}
+
+.breadcrumb-wrapper a .icon-home {
+  width: 1.375rem;
+  margin-right: 0.3125rem;
+  position: relative;
+  top: 4px;
+}
+
+.breadcrumb-wrapper a:hover {
+  color: #008ABF;
+  transition: 0.2s ease;
+}
+
+.breadcrumb-wrapper a:hover svg path {
+  transition: 0.2s ease;
+  fill: #008ABF;
+}
+
+.breadcrumb-wrapper a:hover:last-child {
+  color: #393a3f;
+}
+
+form.search-bar-container {
+  width: 100%;
+  display: block;
+  margin-bottom: 0;
+}
+
+input#search-bar {
+  width: 100%;
+  height: 2.8125rem;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+}
+
+input#search-bar:focus {
+  border: 1px solid #008ABF;
+  transition: 0.35s ease;
+  color: #008ABF;
+}
+
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.search-icon:hover path {
+  fill: #008ABF;
+  transition: 0.25s ease;
+}
+
+.search-icon:hover rect {
+  fill: #008ABF;
+  transition: 0.25s ease;
+}
+
+.nav-details p {
+  margin-bottom: 0.9375rem;
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  width: 1.375rem;
+  height: 1.375rem;
+  top: -2.1875rem;
+  right: 1.25rem;
 }
