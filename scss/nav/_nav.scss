@@ -1,4 +1,4 @@
-.nav-bar {
+.primary-nav {
   height: 3.75rem;
   background-color: #008ABF;
   overflow: hidden;
@@ -31,12 +31,6 @@
   position: relative;
   margin-left: 1.25rem;
   top: -2px;
-}
-
-.nav-bar ul {
-  margin: 0;
-  padding: 0;
-  color: white;
 }
 
 .nav-bar ul li {
@@ -240,5 +234,36 @@ input#search-bar:focus:-ms-placeholder {
 body.mobile-nav-open {
   .mobile-nav {
     left: 0;
+  }
+}
+
+.desktop {
+  display: none !important;
+
+  @include break-above(tablet) {
+    display: block !important;
+  }
+}
+
+.mobile {
+  @include break-above(tablet) {
+    display: none !important;
+  }
+}
+
+.primary-nav-links {
+  max-width: 960px;
+  margin: 0 auto;
+
+  li {
+    display: none !important;
+
+    @include break-above(tablet) {
+      display: inline-block !important;
+    }
+  }
+
+  .ibm-cloud-logo {
+    display: inline-block !important;
   }
 }
