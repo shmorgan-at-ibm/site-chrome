@@ -1,0 +1,11 @@
+@mixin break-above($point) {
+  @if $point == mobile {
+    @media (min-width: $mobile-breakpoint) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: $tablet-breakpoint) { @content; }
+  }
+  @else if $point == desktop {
+    @media (min-width: $desktop-breakpoint) { @content; }
+  }
+}
