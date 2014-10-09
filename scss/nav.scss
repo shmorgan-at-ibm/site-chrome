@@ -1,7 +1,5 @@
-// Partials useful for both nav/footer
-@import 'shared/variables';
-@import 'shared/mixins';
-@import 'shared/typography';
+// Shared Settings & Libraries
+@import 'shared/shared';
 
-// Partials specific to the nav
+// Navigation-specific Styles
 @import 'nav/nav';
