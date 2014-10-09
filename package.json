@@ -1,0 +1,24 @@
+{
+  "name": "site-chrome",
+  "version": "0.0.1",
+  "description": "IBM Cloud site chrome components",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:mmwtsn/site-chrome.git"
+  },
+  "dependencies": {
+    "gulp": "^3.8.7",
+    "gulp-sass": "^0.7.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4",
+    "gulp-lintspaces": "^0.2.1",
+    "gulp-sass": "^0.7.2",
+    "gulp-scss-lint": "^0.1.0",
+    "gulp-watch": "^0.6.9"
+  },
+  "author": "M. Maxwell Watson",
+  "license": "MIT"
+}
