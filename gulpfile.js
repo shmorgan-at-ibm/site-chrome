@@ -24,7 +24,7 @@ gulp.task('scripts', function() {
 
 // SASS tasks
 gulp.task('styles', function() {
-  return gulp.src(sassPath)
+  return gulp.src([sassPath, '!scss/shared/bourbon/**/*.scss', '!scss/shared/_reset.scss'])
     .pipe(scsslint(lintConfig))
     .pipe(sass(sassConfig))
     .pipe(gulp.dest(distPath));
