@@ -1,5 +1,52 @@
-.footer {
-  background: #000;
+#ibm-cloud-footer {
+  background: #f8f8f8;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+
+  .container {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 20px 0;
+
+    @include break-above(mobile) {
+      padding: 0;
+    }
+  }
+
+  .ibm-logo {
+    width: 80px;
+    margin-bottom: 10px;
+
+    @include break-above(mobile) {
+      margin: 30px 20px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    text-align: center;
+
+    @include break-above(mobile) {
+    float: left;
+    }
+  }
+
+  a {
+    color: #333;
+    display: block;
+    padding: 10px 0;
+
+    @include break-above(mobile) {
+      padding: 40px 20px;
+    }
+  }
 }
 
 .box_overlay.open {
@@ -8,7 +55,7 @@
   top: 150px;
   border-radius: 5px;
   padding: 10px;
-  background: url("http://consent.truste.com/get?name=trans.png") repeat scroll 0% 0% transparent;
+  background: url('http://consent.truste.com/get?name=trans.png') repeat scroll 0% 0% transparent;
   left: 50%;
   margin-left: -450px;
 }
@@ -20,3 +67,4 @@
 .box_overlay.open .box_overlay_inner {
   display: block;
 }
+
