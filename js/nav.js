@@ -5,17 +5,17 @@ $(document).ready(function() {
     $('body').toggleClass('mobile-nav-open');
   });
 
-  $('.mobile-link').on('click', function(e) {
+  $('.mobile-link > a').on('click', function(e) {
     e.preventDefault();
 
     $('.mobile-link').removeClass('active');
-    $(this).addClass('active');
+    $(this).parent().addClass('active');
   });
 
-  $('.nested-mobile-link').on('click', function(e) {
+  $('.nested-mobile-link > a').on('click', function(e) {
     e.preventDefault();
 
-    var $this = $(this);
+    var $this = $(this).parent();
 
     if($this.hasClass('active')) {
       $this.toggleClass('active');
