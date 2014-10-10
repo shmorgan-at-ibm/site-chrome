@@ -1,4 +1,7 @@
 @mixin break-above($point) {
+  @if $point == mobile {
+    @media (min-width: 760px) { @content; }
+  }
   @if $point == desktop {
     @media (min-width: 1200px) { @content; }
   }
