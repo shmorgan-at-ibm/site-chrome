@@ -87,6 +87,10 @@
     position: relative;
   }
 
+  li:hover {
+    background: $primary-blue;
+  }
+
   li a:hover {
     color: #fff;
   }
