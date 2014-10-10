@@ -34,7 +34,7 @@
     text-align: center;
 
     @include break-above(mobile) {
-    float: left;
+      float: left;
     }
   }
 
@@ -49,22 +49,23 @@
   }
 }
 
-.box_overlay.open {
-  position: absolute;
-  z-index: 2001800;
-  top: 150px;
-  border-radius: 5px;
-  padding: 10px;
-  background: url('http://consent.truste.com/get?name=trans.png') repeat scroll 0% 0% transparent;
-  left: 50%;
-  margin-left: -450px;
-}
+#ibm-cloud-cookie-overlay {
+  &.open {
+    position: absolute;
+    z-index: 2001800;
+    top: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    background: url('http://consent.truste.com/get?name=trans.png') repeat scroll 0% 0% transparent;
+    left: 50%;
+    margin-left: -450px;
 
-.box_overlay_inner {
-  display: none;
-}
+    .cookie-overlay-inner {
+      display: block;
+    }
+  }
 
-.box_overlay.open .box_overlay_inner {
-  display: block;
+  .cookie-overlay-inner {
+    display: none;
+  }
 }
-
