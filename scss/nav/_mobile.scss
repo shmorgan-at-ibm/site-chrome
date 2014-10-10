@@ -5,18 +5,15 @@
   width: 250px;
   height: 100%;
   background: #333;
+  overflow: scroll;
   z-index: 100;
-  @include transition(all ease-out 0.4s);
   background: $secondary-blue;
+  @include transition(all ease-out 0.4s);
 
   .mobile-nav-toggle {
     display: block;
     padding: 20px;
     width: 20px;
-  }
-
-  .mobile-link {
-    border-top: 1px solid #004a71;
   }
 
   .mobile-link:first-child {
@@ -27,16 +24,36 @@
     font-size: 1rem;
   }
 
-  .mobile-link.active {
-    background: $tertiary-blue;
-    border-top: 1px solid $secondary-blue;
+  .mobile-link.local {
+    border-top: 1px solid #004a71;
   }
 
-  .mobile-link.active a {
-    border-bottom: 1px solid $secondary-blue;
+  .mobile-link.local a {
+    border-bottom: 1px solid #004a71;
+  }
+
+  .mobile-link.global {
+    background: $tertiary-blue;
+
+    a {
+      border-bottom: 1px solid $secondary-blue;
+    }
+  }
+
+  .nested-mobile-link.active {
+    border-bottom: 1px solid #004a71;
   }
 
   .mobile-link.active > a {
+    color: #fff;
+  }
+
+  .nested-mobile-link.active > a {
+    color: #fff;
+  }
+
+  .mobile-link a:hover {
+    background: $primary-blue;
     color: #fff;
   }
 
@@ -44,17 +61,45 @@
     display: block;
   }
 
-  .mobile-link.active img {
+  .mobile-link.active .chevron {
     position: relative;
     top: -14px;
     @include transition(all ease-in-out 0.2s);
+  }
+
+  .mobile-link.active .nested-mobile-link .chevron-wrapper .chevron {
+    top: 0;
+  }
+
+  .mobile-link.active .nested-mobile-link.active .chevron-wrapper .chevron {
+    top: -14px;
   }
 
   .mobile-link ul {
     display: none;
   }
 
-  .chevron {
+  .nested-mobile-link a {
+    border: 0;
+  }
+
+  .nested-mobile-link.active a {
+    border-left: 3px solid $accent-blue;
+  }
+
+  .nested-mobile-link li {
+    display: none;
+  }
+
+  .nested-mobile-link ul a {
+    border: 0 !important;
+  }
+
+  .nested-mobile-link.active li {
+    display: block;
+  }
+
+  .chevron-wrapper {
     float: right;
     width: 20px;
     height: 12px;
@@ -68,7 +113,6 @@
   }
 
   li a {
-    border-bottom: 1px solid #004a71;
     display: block;
     padding: 8px 20px;
   }
