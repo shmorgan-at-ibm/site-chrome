@@ -6,11 +6,10 @@
 
   width: 100%;
   background-color: $primary-blue;
-  float: left;
+  float: none;
   font-family: Helvetica Neue, Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: 0.5px;
-  overflow: hidden;
 
   .desktop-links {
     max-width: 960px;
@@ -24,9 +23,10 @@
     height: $desktop-nav-height;
     line-height: $desktop-nav-height;
 
-    a {
+    > a {
       height: $desktop-nav-height;
       line-height: $desktop-nav-height;
+      position: relative;
     }
 
     @include break-above(desktop) {
@@ -36,10 +36,6 @@
     &.cloud-logo-container {
       display: block;
     }
-  }
-
-  .desktop-link > a {
-    position: relative;
   }
 
   .desktop-link > a:before {
@@ -78,6 +74,7 @@
 
     img {
       width: 100%;
+      box-sizing: container-box;
     }
   }
 
