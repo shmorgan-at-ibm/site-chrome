@@ -2,4 +2,6 @@
 @import 'shared/shared';
 
 // Navigation-specific Styles
-@import 'nav/nav';
+@import 'nav/responsive';
+@import 'nav/desktop';
+@import 'nav/mobile';
