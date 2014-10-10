@@ -1,0 +1,21 @@
+body.mobile-nav-open {
+  #ibm-cloud-mobile-nav {
+    left: 0;
+  }
+}
+
+#ibm-cloud-nav {
+  .desktop {
+    display: none;
+
+    @include break-above(desktop) {
+      display: block;
+    }
+  }
+
+  .mobile {
+    @include break-above(desktop) {
+      display: none;
+    }
+  }
+}

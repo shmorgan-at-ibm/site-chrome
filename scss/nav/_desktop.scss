@@ -1,0 +1,109 @@
+#ibm-cloud-nav {
+  $desktop-nav-height: 50;
+  $link-color: $accent-blue;
+  $link-hover-color: #fff;
+  $link-hover-background: $accent-blue;
+
+  width: 100%;
+  background-color: $primary-blue;
+  float: left;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+  .desktop-links {
+    max-width: 960;
+    margin: 0 auto;
+  }
+
+  .desktop-link {
+    display: none;
+    line-height: $desktop-nav-height;
+
+    @include break-above(desktop) {
+      display: inline-block;
+    }
+  }
+
+  .desktop-link > a {
+    position: relative;
+  }
+
+  .desktop-link > a:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 23px;
+    right: 0;
+    border-color: $accent-blue transparent transparent;
+    border-width: 6px;
+    border-style: solid;
+  }
+
+  .desktop-link:hover > a:before {
+    top: 18px;
+    border-width: 5px;
+    border-color: transparent transparent #fff;
+  }
+
+  .desktop-link,
+  .ibm-logo-container {
+    height: $desktop-nav-height;
+  }
+
+  .ibm-logo-container {
+    background: $alt-blue;
+    float: left;
+    width: 100;
+  }
+
+  .ibm-logo {
+    height: 50;
+    width: 100;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    float: left;
+    line-height: $desktop-nav-height / 1.666;
+    text-align: left;
+  }
+
+  li a {
+    color: $link-color;
+    text-decoration: none;
+    display: block;
+    padding: 0 20;
+    position: relative;
+  }
+
+  li a:hover {
+    color: #fff;
+  }
+
+  li ul {
+    position: absolute;
+    display: none;
+    padding: 20 0 30;
+    background-color: $secondary-blue;
+    overflow: hidden;
+  }
+
+  li:hover ul {
+    display: block;
+  }
+
+  li li {
+    border-bottom: 1px solid $border-blue;
+    clear: both;
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+  }
+}
