@@ -20,7 +20,13 @@
 
   .desktop-link {
     display: none;
+    height: $desktop-nav-height;
     line-height: $desktop-nav-height;
+
+    a {
+      height: $desktop-nav-height;
+      line-height: $desktop-nav-height;
+    }
 
     @include break-above(desktop) {
       display: inline-block;
