@@ -10,6 +10,7 @@
   font-family: Helvetica Neue, Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: 0.5px;
+  overflow: hidden;
 
   .desktop-links {
     max-width: 960px;
@@ -30,6 +31,10 @@
 
     @include break-above(desktop) {
       display: inline-block;
+    }
+
+    &.cloud-logo-container {
+      display: block;
     }
   }
 
@@ -83,7 +88,7 @@
 
   .ibm-cloud-logo {
     width: 120px;
-    margin-bottom: -14px;
+    margin-bottom: -4px;
   }
 
   ul {
