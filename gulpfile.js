@@ -5,11 +5,14 @@ var jshint     = require('gulp-jshint');
 var scsslint   = require('gulp-scss-lint');
 var lintspaces = require('gulp-lintspaces');
 var connect    = require('gulp-connect');
+var include    = require('gulp-file-include');
 
 // Asset paths
+var htmlPath   = 'html/*.html';
 var sassPath   = 'scss/**/*.scss';
 var jsPath     = 'js/*.js';
 var distPath   = 'dist/';
+var buildPath   = 'build/';
 
 // Configuration objects
 var sassConfig = { 'outputStyle': 'compressed' };
@@ -31,8 +34,16 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(distPath));
 });
 
+// Include HTML partials in primary layout
+gulp.task('include', function() {
+  gulp.src(['html/index.html'])
+    .pipe(include())
+    .pipe(gulp.dest(distPath));
+});
+
 // Watch files for changes
 gulp.task('watch', function() {
+  gulp.watch(htmlPath, ['include']);
   gulp.watch(sassPath, ['styles']);
   gulp.watch(jsPath, ['scripts']);
 });
@@ -40,9 +51,10 @@ gulp.task('watch', function() {
 // Web server
 gulp.task('server', function() {
   connect.server({
-    livereload: true
+    root: distPath,
+    port: 4000
   });
 });
 
 // Default task definition
-gulp.task('default', ['server', 'scripts', 'styles', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'server', 'include', 'watch']);
