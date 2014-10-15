@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "html": "@@include('../../dist/nav.html')",
+    "css": "@@include('../../dist/nav.css')"
+  },
+  "footer": {
+    "html": "@@include('../../dist/footer.html')",
+    "css": "@@include('../../dist/footer.css')"
+  }
+}
