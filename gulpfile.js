@@ -8,9 +8,9 @@ var connect    = require('gulp-connect');
 var include    = require('gulp-file-include');
 
 // Asset paths
-var htmlPath   = 'html/*.html';
-var sassPath   = 'scss/**/*.scss';
-var jsPath     = 'js/*.js';
+var htmlPath   = 'src/html/*.html';
+var sassPath   = 'src/scss/**/*.scss';
+var jsPath     = 'src/js/*.js';
 var distPath   = 'dist/';
 var buildPath   = 'build/';
 
@@ -28,7 +28,7 @@ gulp.task('scripts', function() {
 
 // SASS tasks
 gulp.task('styles', function() {
-  return gulp.src([sassPath, '!scss/shared/bourbon/**/*.scss', '!scss/shared/_reset.scss'])
+  return gulp.src([sassPath, '!src/scss/shared/bourbon/**/*.scss', '!src/scss/shared/_reset.scss'])
     .pipe(scsslint(lintConfig))
     .pipe(sass(sassConfig))
     .pipe(gulp.dest(distPath));
