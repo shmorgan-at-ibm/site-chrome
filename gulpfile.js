@@ -4,6 +4,7 @@ var sass       = require('gulp-sass');
 var jshint     = require('gulp-jshint');
 var scsslint   = require('gulp-scss-lint');
 var lintspaces = require('gulp-lintspaces');
+var connect    = require('gulp-connect');
 
 // Asset paths
 var sassPath   = 'scss/**/*.scss';
@@ -36,5 +37,12 @@ gulp.task('watch', function() {
   gulp.watch(jsPath, ['scripts']);
 });
 
+// Web server
+gulp.task('server', function() {
+  connect.server({
+    livereload: true
+  });
+});
+
 // Default task definition
-gulp.task('default', ['scripts', 'styles', 'watch']);
+gulp.task('default', ['server', 'scripts', 'styles', 'watch']);
