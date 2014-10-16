@@ -8,14 +8,8 @@
   "description": "IBM Cloud marketing site chrome",
   "main": "dist/content.json",
   "ignore": [
-    "LICENSE",
-    "README.md",
-    "build",
-    "gulpfile.js",
-    "node_modules",
-    "package.json",
-    "src",
-    "tmp"
+    "**/*",
+    "!dist"
   ],
   "license": "MIT"
 }
