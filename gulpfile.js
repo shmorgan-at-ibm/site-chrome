@@ -9,6 +9,7 @@ var connect    = require('gulp-connect');
 var escape     = require('gulp-replace');
 var include    = require('gulp-file-include');
 var minifyHTML = require('gulp-minify-html');
+var minifyJSON = require('gulp-jsonminify');
 
 // Asset paths
 var htmlPath   = 'src/html/*.html';
@@ -80,6 +81,7 @@ gulp.task('server', function() {
 gulp.task('dist', ['escape'], function() {
   return gulp.src('src/json/content.json')
     .pipe(include())
+    .pipe(minifyJSON())
     .pipe(gulp.dest(distPath))
 });
 
