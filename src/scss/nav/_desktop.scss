@@ -27,6 +27,7 @@
       height: $desktop-nav-height;
       line-height: $desktop-nav-height;
       position: relative;
+      @include box-sizing(border-box);
     }
 
     @include break-above(desktop) {
@@ -35,6 +36,12 @@
 
     &.cloud-logo-container {
       display: block;
+    }
+
+    .active {
+      margin: 0 0 0 20px;
+      padding: 0 20px 0 0;
+      border-bottom: 4px solid $accent-blue;
     }
   }
 
