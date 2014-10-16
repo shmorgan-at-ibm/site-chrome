@@ -9,7 +9,7 @@
   "main": "dist/content.json",
   "ignore": [
     "**/*",
-    "!dist/content.json"
+    "!./dist/content.json"
   ],
   "license": "MIT"
 }
