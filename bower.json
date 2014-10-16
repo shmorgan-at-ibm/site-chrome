@@ -7,5 +7,9 @@
   ],
   "description": "IBM Cloud marketing site chrome",
   "main": "dist/content.json",
+  "ignore": {
+    "**/*",
+    "!content.json"
+  },
   "license": "MIT"
 }
