@@ -1,7 +1,7 @@
 {
   "nav": {
     "html": "@@include('../../tmp/nav.html')
-            <script>@@include('../../tmp/nav.html')</script>",
+            <script>@@include('../../tmp/nav.js')</script>",
     "css": "@@include('../../tmp/nav.css')"
   },
   "footer": {
