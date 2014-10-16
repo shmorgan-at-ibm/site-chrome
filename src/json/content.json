@@ -1,10 +1,12 @@
 {
   "nav": {
-    "html": "@@include('../../tmp/nav.html')<script>@@include('../../tmp/nav.js'</script>",
+    "html": "@@include('../../tmp/nav.html')
+            <script>@@include('../../tmp/nav.html')</script>",
     "css": "@@include('../../tmp/nav.css')"
   },
   "footer": {
-    "html": "@@include('../../tmp/footer.html')<script>@@include('../../tmp/footer.js'</script>",
+    "html": "@@include('../../tmp/footer.html')
+            <script>@@include('../../tmp/footer.js')</script>",
     "css": "@@include('../../tmp/footer.css')"
   }
 }
