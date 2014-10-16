@@ -1,0 +1,11 @@
+{
+  "name": "ibm-cloud-site-chrome",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mmwtsn/site-chrome",
+  "authors": [
+    "M. Maxwell Watson <hi@mmwtsn.com>"
+  ],
+  "description": "IBM Cloud marketing site chrome",
+  "main": "dist/content.json",
+  "license": "MIT"
+}
