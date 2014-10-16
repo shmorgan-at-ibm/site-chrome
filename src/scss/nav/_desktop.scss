@@ -39,9 +39,10 @@
     }
 
     .active {
+      border-bottom: 4px solid $accent-blue;
+      color: #fff;
       margin: 0 0 0 20px;
       padding: 0 20px 0 0;
-      border-bottom: 4px solid $accent-blue;
     }
   }
 
