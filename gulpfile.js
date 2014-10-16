@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
 
 // Include HTML partials in primary layout
 gulp.task('include', function() {
-  return gulp.src(['html/index.html'])
+  return gulp.src(['src/html/index.html'])
     .pipe(include())
     .pipe(gulp.dest(buildPath));
 });
