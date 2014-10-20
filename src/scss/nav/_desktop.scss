@@ -71,13 +71,18 @@
 
   .ibm-logo-container {
     float: left;
-    width: 50px;
-    padding: 0 20px 0 5px;
+    width: 55px;
+    margin-right: 5px;
 
     @include break-above(desktop) {
       background: $alt-blue;
       padding: 0;
       width: 100px;
+    }
+
+    a {
+      display: block;
+      width: 90%;
     }
 
     img {
