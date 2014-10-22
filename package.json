@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git@bitbucket.org:mmwtsn/site-chrome.git"
   },
+  "scripts": {
+    "test": "make test"
+  },
   "dependencies": {
     "gulp": "^3.8.7",
     "gulp-sass": "^0.7.2"
