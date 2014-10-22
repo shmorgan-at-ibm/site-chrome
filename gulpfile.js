@@ -56,7 +56,7 @@ gulp.task('lintspaces', function() {
 });
 
 // Include HTML partials in primary layout
-gulp.task('include', function() {
+gulp.task('include', ['styles', 'scripts'], function() {
   return gulp.src(['src/html/index.html'])
     .pipe(include())
     .pipe(gulp.dest(buildPath));
