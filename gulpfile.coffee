@@ -1,2 +1,2 @@
-var source = require('require-dir');
-var tasks  = source('tasks');
+source = require 'require-dir'
+tasks  = source 'tasks'
