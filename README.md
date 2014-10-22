@@ -4,7 +4,7 @@
 This repository contains the site chrome of the IBM Cloud Marketing site and its development environment that is served to various web properties through the [Markup API](https://github.com/mmwtsn/markup-api).
 
 ## Documentation
-Please refer to the [Wiki](https://github.com/mmwtsn/site-chrome/wiki) for usage, development, and deployment documentation.
+Please refer to the [wiki](https://github.com/mmwtsn/site-chrome/wiki) for usage, development, and deployment documentation.
 
 ## Author
 [M. Maxwell Watson](https://github.com/mmwtsn)
