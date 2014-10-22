@@ -26,14 +26,14 @@ var editorConfig = { 'editorconfig': '.editorconfig' };
 
 // HTML tasks
 gulp.task('html', function() {
-  gulp.src(['src/html/nav.html', 'src/html/footer.html'])
+  return gulp.src(['src/html/nav.html', 'src/html/footer.html'])
     .pipe(minifyHTML({quotes:true}))
     .pipe(gulp.dest(buildPath));
 });
 
 // SASS tasks
 gulp.task('styles', function() {
-  gulp.src([sassPath, '!src/scss/shared/bourbon/**/*.scss', '!src/scss/shared/_reset.scss'])
+  return gulp.src([sassPath, '!src/scss/shared/bourbon/**/*.scss', '!src/scss/shared/_reset.scss'])
     .pipe(scsslint(lintConfig))
     .pipe(sass(sassConfig))
     .pipe(gulp.dest(buildPath));
@@ -41,7 +41,7 @@ gulp.task('styles', function() {
 
 // JavaScript tasks
 gulp.task('scripts', function() {
-  gulp.src(jsPath)
+  return gulp.src(jsPath)
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(uglify())
@@ -50,21 +50,21 @@ gulp.task('scripts', function() {
 
 // Generic linting task
 gulp.task('lintspaces', function() {
-  gulp.src(['src/**/*', '!src/scss/shared/bourbon/**/*.scss', '!src/scss/shared/_reset.scss', '!src/img/**/*'])
+  return gulp.src(['src/**/*', '!src/scss/shared/bourbon/**/*.scss', '!src/scss/shared/_reset.scss', '!src/img/**/*'])
     .pipe(lintspaces(editorConfig))
     .pipe(lintspaces.reporter())
 });
 
 // Include HTML partials in primary layout
 gulp.task('include', function() {
-  gulp.src(['src/html/index.html'])
+  return gulp.src(['src/html/index.html'])
     .pipe(include())
     .pipe(gulp.dest(buildPath));
 });
 
 // Escape double quotes for JSONification of compiled source code
 gulp.task('escape', function() {
-  gulp.src('build/*', '!build/index.html')
+  return gulp.src('build/*', '!build/index.html')
     .pipe(escape('\\"', '"'))
     .pipe(escape('"', '\\"'))
     .pipe(gulp.dest(tmpPath));
@@ -87,11 +87,11 @@ gulp.task('server', function() {
 
 // Build content.json for distribution
 gulp.task('dist', ['escape'], function() {
-  gulp.src('src/json/content.json')
+  return gulp.src('src/json/content.json')
     .pipe(include())
     .pipe(minifyJSON())
     .pipe(gulp.dest(distPath))
 });
 
 // Default task definition
-gulp.task('default', ['html', 'styles', 'scripts', 'server', 'include', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'include', 'html', 'watch', 'server']);
