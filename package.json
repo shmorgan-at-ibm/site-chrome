@@ -10,11 +10,9 @@
   "scripts": {
     "test": "make test"
   },
-  "dependencies": {
-    "gulp": "^3.8.7",
-    "gulp-sass": "^0.7.2"
-  },
   "devDependencies": {
+    "chai": "^1.9.2",
+    "coffee-script": "^1.8.0",
     "gulp": "^3.8.7",
     "gulp-connect": "^2.0.6",
     "gulp-file-include": "^0.5.1",
@@ -25,7 +23,8 @@
     "gulp-replace": "^0.4.0",
     "gulp-sass": "^0.7.2",
     "gulp-scss-lint": "^0.1.0",
-    "gulp-uglify": "^1.0.1"
+    "gulp-uglify": "^1.0.1",
+    "mocha": "^2.0.0"
   },
   "author": "M. Maxwell Watson",
   "license": "MIT"
