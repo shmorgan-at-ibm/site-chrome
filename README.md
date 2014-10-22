@@ -1,4 +1,4 @@
-# Site Chrome
+# Site Chrome ![build status](https://travis-ci.org/mmwtsn/site-chrome.svg?branch=master)
 
 ## Description
 This repository contains the site chrome of the IBM Cloud Marketing site and its development environment that is served to various web properties through the [Markup API](https://github.com/mmwtsn/markup-api).
