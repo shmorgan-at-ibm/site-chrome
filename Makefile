@@ -1,10 +1,15 @@
+BIN             = ./node_modules/.bin
+TEST_REPORTER   = --reporter list
+GULP_REPORTER   = --reporters coffee-script
+COFFEE_COMPILER = --compilers coffee:coffee-script/register
+
 test:
-	./node_modules/.bin/mocha --compilers coffee:coffee-script/register
+	$(BIN)/mocha $(COFFEE_COMPILER)
 
 gulp:
-	./node_modules/.bin/gulp --reporters coffee-script
+	$(BIN)/gulp $(GULP_REPORTER)
 
 gulp-dist:
-	./node_modules/.bin/gulp --reporters coffee-script dist
+	$(BIN)/gulp $(GULP_REPORTER) dist
 
 .PHONY: test
