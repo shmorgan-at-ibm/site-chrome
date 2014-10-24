@@ -8,7 +8,10 @@
     "url": "git@bitbucket.org:mmwtsn/site-chrome.git"
   },
   "scripts": {
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register",
+    "gulp": "./node_modules/.bin/gulp --reporters coffee-script",
+    "gulp-dist": "./node_modules/.bin/gulp --reporters coffee-script dist",
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register"
   },
   "devDependencies": {
     "chai": "^1.9.2",
