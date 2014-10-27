@@ -120,11 +120,10 @@
 //    }
 
     .ibm-logo {
-      display: none;
+//      display: none;
       @include break-above(mobile) {
         display: block;
         position: absolute;
-        display: block;
         width: 56px;
         background: url('//1.www.s81c.com/common/v17e/i/t/ibm-logo.png') no-repeat scroll 0px -99px #0D79A3;
         height: 30px;
@@ -138,7 +137,7 @@
     }
 
     img {
-      width: 100%;
+      width: 85%;
       box-sizing: container-box;
     }
   }
