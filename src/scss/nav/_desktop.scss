@@ -13,7 +13,7 @@
 
   .desktop-links {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0;
     height: $desktop-nav-height;
     overflow: hidden;
   }
@@ -22,6 +22,7 @@
     display: none;
     height: $desktop-nav-height;
     line-height: $desktop-nav-height;
+    margin: 0 10px 0 0;
 
     > a {
       height: $desktop-nav-height;
@@ -36,6 +37,23 @@
 
     &.cloud-logo-container {
       display: block;
+      margin: 0;
+      h1 {
+        font-family: Helvetica Neue, Helvetica, sans-serif;
+        font-size: 1.25rem;
+        margin: 0;
+        font-weight: normal;
+        font-size: 24px;
+        a {
+          color: #fff;
+        }
+        span {
+//          font-weight: normal;
+          font-family: 'LubalinDemiIBM';
+//          font-family: "HelveticaNeue-Bold", "HelvBoldIBM", Arial, sans-serif;
+
+        }
+      }
     }
 
     .active {
@@ -54,8 +72,21 @@
     top: 23px;
     right: 0;
     border-color: $accent-blue transparent transparent;
-    border-width: 6px;
+    border-width: 5px;
     border-style: solid;
+  }
+
+  // exceptions
+  .desktop-link a#masthead-link-marketplace,
+  .desktop-link a#masthead-link-partners{
+    padding: 0 0 0 20px;
+    &:before {
+      display: none;
+    }
+  }
+  .desktop-link a#masthead-link-marketplace:before,
+  .desktop-link a#masthead-link-partners:before{
+    display: none;
   }
 
   .desktop-link:hover > a:before {
@@ -70,30 +101,46 @@
   }
 
   .ibm-logo-container {
+    background: $alt-blue;
     float: left;
-    width: 55px;
+    width: 60px;
     margin-right: 5px;
 
     @include break-above(desktop) {
-      background: $alt-blue;
+//      background: $alt-blue;
       padding: 0;
-      width: 100px;
+      width: 60px;
+      display: block;
     }
 
-    a {
-      display: block;
-      width: 90%;
+//    a {
+//      display: block;
+//      display: none;
+      //      width: 90%;
+//    }
+
+    .ibm-logo {
+      display: none;
+      @include break-above(mobile) {
+        display: block;
+        position: absolute;
+        display: block;
+        width: 56px;
+        background: url('//1.www.s81c.com/common/v17e/i/t/ibm-logo.png') no-repeat scroll 0px -99px #0D79A3;
+        height: 30px;
+        top: 11px;
+        text-indent: -999em;
+        padding: 0px;
+        &:hover {
+          background-position: 0px -129px;
+        }
+      }
     }
 
     img {
       width: 100%;
       box-sizing: container-box;
     }
-  }
-
-  .ibm-logo {
-    height: 50px;
-    width: 100px;
   }
 
   .ibm-cloud-logo {
@@ -129,11 +176,26 @@
   }
 
   li ul {
+    border-left: 1px solid $border-blue;
+    border-right: 1px solid $border-blue;
     position: absolute;
     display: none;
     padding: 20px 0 30px;
     background-color: $secondary-blue;
-    overflow: hidden;
+//    overflow: hidden;
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -16px;
+        left: 17px;
+//        border-color: $accent-blue transparent transparent;
+//        border-width: 5px;
+        border-style: solid;
+      border-width: 8px;
+      border-color: transparent transparent $secondary-blue;
+    }
   }
 
   li:hover ul {
