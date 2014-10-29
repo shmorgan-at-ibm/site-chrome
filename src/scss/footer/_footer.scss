@@ -36,6 +36,17 @@
     @include break-above(mobile) {
       float: left;
     }
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
   }
 
   .footer-link {

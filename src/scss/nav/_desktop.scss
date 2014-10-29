@@ -148,7 +148,9 @@
   }
 
   ul {
-    padding: 0;
+    &.desktop-links {
+      padding: 0;
+    }
   }
 
   li {
@@ -179,6 +181,7 @@
     border-right: 1px solid $border-blue;
     position: absolute;
     display: none;
+    z-index: 99999;
     padding: 20px 0 30px;
     background-color: $secondary-blue;
 //    overflow: hidden;
