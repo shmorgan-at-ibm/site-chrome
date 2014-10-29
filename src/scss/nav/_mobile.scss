@@ -17,6 +17,10 @@
     width: 20px;
   }
 
+  .test-class{
+    display: none;
+  }
+
   .mobile-link:first-child {
     margin-bottom: 20px;
   }
@@ -27,10 +31,14 @@
 
   .mobile-link.local {
     border-top: 1px solid #004a71;
+    ul li a{
+      margin-left: 0.5em;
+    }
   }
 
   .mobile-link.local a {
     border-bottom: 1px solid #004a71;
+
   }
 
   .mobile-link.global {
@@ -39,10 +47,17 @@
     a {
       border-bottom: 1px solid $secondary-blue;
     }
+
+    ul li a{
+      margin-left: 0.5em;
+    }
   }
 
   .nested-mobile-link.active {
     border-bottom: 1px solid #004a71;
+    ul li a{
+      margin-left: 1em;
+    }
   }
 
   .mobile-link.active > a {
@@ -129,4 +144,6 @@
   img {
     width: 20px;
   }
+
+
 }
