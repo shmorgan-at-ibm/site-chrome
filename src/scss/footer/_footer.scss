@@ -64,15 +64,22 @@
   &.open {
     position: absolute;
     z-index: 2001800;
-    top: 150px;
+    margin-top: 0px;
     border-radius: 5px;
     padding: 10px;
     background: url('http://consent.truste.com/get?name=trans.png') repeat scroll 0% 0% transparent;
-    left: 50%;
-    margin-left: -450px;
-
+	left: 50%;
+	margin-left: -30%;
+	right: 25%;
     .cookie-overlay-inner {
       display: block;
+      iframe {
+        display: block !important;
+        height: 900px !important;
+        overflow: hidden !important;
+        position: static !important;
+        width: 100% !important;
+      }
     }
   }
 
