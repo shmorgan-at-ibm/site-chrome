@@ -36,6 +36,7 @@
     @include break-above(mobile) {
       float: left;
     }
+
     a {
       text-decoration: none;
       &:link,
@@ -47,12 +48,133 @@
         text-decoration: underline;
       }
     }
+
+    
+  }
+
+  ul.social{
+    li {
+    
+
+      .icon-wrapper{
+        @include clearfix;
+        display: inline-block;
+
+      }
+
+      &.right{
+        margin-top: 20px;
+      }
+
+      @include break-above(mobile) {
+        &.right{
+          float: right;
+          margin-top: 0px;
+        }
+
+        .icon-wrapper{
+          display: block;
+          float: left;
+        }
+      }
+    }
+
+    
+    .label{
+      color: #333;
+      display: inline-block;
+      line-height: 24px;
+      text-decoration: none;
+
+      &.top{
+        display: block;
+      }
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+
+      @include break-above(mobile) {
+        float: left;
+        margin: 20px 20px 20px 0;
+      }
+      
+    }
+
+    .social-link{
+      background: url('http://api.markup.ibmcloud.io/images/ibm-cloud-footer-icons.png') repeat scroll 0% 0% transparent; 
+      background-position: 0px 0px;
+      display: block;
+      margin: 10px 20px 10px 0;
+      height: 24px;
+      width:24px;
+
+      float: left;
+      
+      &.chat {
+        background-position:0 0;
+      }
+
+      &.email {
+        background-position:-24px 0;
+      }
+
+      &.tele {
+        background-position:-48px 0;
+        cursor: default;
+      }
+
+
+      &.tw {
+        background-position:-72px 0;
+      }
+
+
+      &.yt{
+        background-position:-96px 0;
+      }
+
+      &.wp{
+        background-position:-120px 0;
+      }
+
+      &.gp{
+        background-position:-144px 0;
+      }
+
+      &.fb{
+        background-position:-168px 0;
+      }
+
+      &.li{
+        background-position:-192px 0;
+      }
+
+       @include break-above(mobile) {
+        float: left;
+        margin: 20px 20px 20px 0;
+
+        &.tele{
+          clear: none;
+        }
+
+        &.chat {
+          margin-left: 20px;
+          background-position:0 0;
+        }
+      }
+    }
   }
 
   .footer-link {
     color: #333;
     display: block;
     padding: 5px 0;
+
 
     @include break-above(mobile) {
       padding: 40px 20px;
