@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  if($(window).width() <640){
+    $('.mobile-link.local').addClass('active');
+  }
+
   $('.mobile-nav-toggle').on('click', function(e) {
     e.preventDefault();
 
