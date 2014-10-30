@@ -19,3 +19,11 @@ body.mobile-nav-open {
     }
   }
 }
+
+#ibm-cloud-cookie-overlay {
+  &.open {
+    @include break-above(small) {
+	  left: 20px !important; margin-left: 0px !important; right: 20px !important;
+    }
+  }
+}
