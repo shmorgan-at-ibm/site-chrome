@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var ibmcloudnavcookie = document.cookie.replace(/(?:(?:^|.*;\s*)ibmcloudnav\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   var ele_str = 'a[href^="'+ibmcloudnavcookie+'"]';
   var li = $(ele_str).parent();
@@ -6,6 +7,11 @@ $(document).ready(function() {
   var mobileLink = $(nestedMobileLink).parent().parent();
   $(mobileLink).addClass('active');
   $(nestedMobileLink).addClass('active');
+
+  if($(window).width() <640){
+    $('.mobile-link.local').addClass('active');
+  }
+
   $('.mobile-nav-toggle').on('click', function(e) {
     e.preventDefault();
     $('body').toggleClass('mobile-nav-open');

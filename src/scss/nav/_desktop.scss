@@ -98,6 +98,7 @@
   .desktop-link,
   .ibm-logo-container {
     height: $desktop-nav-height;
+    overflow: hidden;
   }
 
   .ibm-logo-container {
@@ -105,6 +106,12 @@
     float: left;
     width: 60px;
     margin-right: 5px;
+    &:hover {
+      background: $secondary-blue;
+      .ibm-logo {
+        background-color: $secondary-blue;
+      }
+    }
 
     @include break-above(desktop) {
 //      background: $alt-blue;
