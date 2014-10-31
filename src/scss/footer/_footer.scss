@@ -48,38 +48,28 @@
         text-decoration: underline;
       }
     }
-
-    
   }
 
   ul.social{
     li {
-    
-
       .icon-wrapper{
         @include clearfix;
         display: inline-block;
-
       }
-
       &.right{
         margin-top: 20px;
       }
-
       @include break-above(mobile) {
         &.right{
           float: right;
           margin-top: 0px;
         }
-
         .icon-wrapper{
           display: block;
           float: left;
         }
       }
     }
-
-    
     .label{
       color: #333;
       display: inline-block;
@@ -102,19 +92,16 @@
         float: left;
         margin: 20px 20px 20px 0;
       }
-      
     }
 
     .social-link{
-      background: url('http://api.markup.ibmcloud.io/images/ibm-cloud-footer-icons.png') repeat scroll 0% 0% transparent; 
+      background: url('http://api.markup.ibmcloud.io/images/ibm-cloud-footer-icons.png') repeat scroll 0% 0% transparent;
       background-position: 0px 0px;
       display: block;
       margin: 10px 20px 10px 0;
       height: 24px;
       width:24px;
-
       float: left;
-      
       &.chat {
         background-position:0 0;
       }
@@ -154,7 +141,7 @@
         background-position:-192px 0;
       }
 
-       @include break-above(mobile) {
+      @include break-above(mobile) {
         float: left;
         margin: 20px 20px 20px 0;
 
@@ -190,9 +177,9 @@
     border-radius: 5px;
     padding: 10px;
     background: url('http://consent.truste.com/get?name=trans.png') repeat scroll 0% 0% transparent;
-	left: 50%;
-	margin-left: -30%;
-	right: 25%;
+    left: 50%;
+    margin-left: -30%;
+    right: 25%;
     .cookie-overlay-inner {
       display: block;
       iframe {
