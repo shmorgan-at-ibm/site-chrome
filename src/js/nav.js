@@ -35,11 +35,10 @@ $(document).ready(function() {
       $this.addClass('active');
     }
   });
-  
+
   $('.nested-mobile-link > ul > li > a').on('click', function(e){
     cname = "ibmcloudnav";
     value = $(e.target).attr('href');
-    
     document.cookie=cname+"="+value+";"+"max-age="+(24*60*60);
   });
 });
